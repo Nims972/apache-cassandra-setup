@@ -11,7 +11,7 @@ java -version
 2. Add the Apache repository of Cassandra to the file cassandra.sources.list
 
 ```
-echo "deb https://debian.cassandra.apache.org 41x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.s
+echo "deb https://debian.cassandra.apache.org 41x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
 ```
 
 The expected output will be as below.
