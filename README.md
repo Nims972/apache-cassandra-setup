@@ -52,3 +52,10 @@ listen_address:<IP of that VM>
 rpc_address: <IP of that VM>
 endpoint_snitch: RackInferringSnitch
 ```
+2. Allow ports for communications
+```
+sudo ufw allow 7000
+sudo ufw allow 7001
+sudo ufw allow 9042
+sudo ufw allow 7199
+```
