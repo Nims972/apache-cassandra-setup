@@ -37,3 +37,18 @@ nodetool status
 ![image](https://github.com/Nims972/apache-cassandra-setup/assets/22131911/aec2f9ba-d1cc-416d-ac23-503fe3f0fc49)
 nodetool status should be like as in image.
 Note: cassandra may take some time get warmup and available depends on the machine. (but should not take several mins usually)
+
+## Configure Apache Cassandra for Multiple nodes
+
+1. go to /etc/cassandra directory , take backup of cassandra.yaml file and change below items in cassandra.yaml
+```
+cluster_name: 'MyCassandraCluster'
+num_tokens: 256
+seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+         - seeds: "<IP1>,<IP2>"
+listen_address:<IP of that VM>
+rpc_address: <IP of that VM>
+endpoint_snitch: RackInferringSnitch
+```
