@@ -59,3 +59,6 @@ sudo ufw allow 7001
 sudo ufw allow 9042
 sudo ufw allow 7199
 ```
+3. use nodetool status to check if everything is configured properly
+   Below snippet is having 8 nodes configured 
+![image](https://github.com/Nims972/apache-cassandra-setup/assets/22131911/5e6930a8-4556-47bc-b987-5a78c5342909)
